@@ -12,7 +12,7 @@ then
 echo "same ips, no need update"
 else
 date >> dns.log
-ssh  root@plesk.host  "plesk bin dns -d domain.com -a 'myip' -ip $ip" >> dns.log
-ssh  root@plesk.host  "plesk bin dns -a domain.com -a 'myip' -ip $ip" >> dns.log
+ssh  root@plesk.host  "plesk bin dns -d domain.com -a 'subdomain' -ip $ip2" >> dns.log
+ssh  root@plesk.host  "plesk bin dns -a domain.com -a 'subdomain' -ip $ip" >> dns.log
 echo $ip > mydns.txt
 fi
